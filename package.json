@@ -3,7 +3,6 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "deploy": "npx netlify deploy",
     "start:client": "webpack-dev-server --open",
     "start:server": "ts-node packages/server/src/index.ts"
   },
