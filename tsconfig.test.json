@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "composite": true
+  },
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "packages/client/src/__tests__"
+    },
+    {
+      "path": "packages/server/src/__tests__"
+    },
+    {
+      "path": "packages/shared/src/__tests__"
+    }
+  ]
+}

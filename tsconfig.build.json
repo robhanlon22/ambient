@@ -6,10 +6,13 @@
   "include": [],
   "references": [
     {
-      "path": "./tsconfig.build.json"
+      "path": "./packages/client"
     },
     {
-      "path": "./tsconfig.test.json"
+      "path": "./packages/server"
+    },
+    {
+      "path": "./packages/shared"
     }
   ]
 }

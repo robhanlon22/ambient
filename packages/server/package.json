@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/ohwillie/ambient/issues"
+  },
+  "dependencies": {
+    "@ambient/shared": "^0.0.0"
   }
 }
