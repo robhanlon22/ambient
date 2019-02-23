@@ -17,6 +17,7 @@
     "lint-staged": "^8.1.4",
     "npm-check": "^5.9.0",
     "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.3333"

@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "pre-commit": "lint-staged && lerna exec tsc -- --project ."
+    "pre-commit": "lint-staged && lerna exec tsc -- --project . --noEmit"
   }
 }
