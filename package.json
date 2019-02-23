@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "build": "tsc --clean --build tsconfig.build.json && webpack",
+    "build": "tsc --build tsconfig.build.json --clean && webpack",
     "start:client": "webpack-dev-server --open",
     "start:server": "ts-node packages/server/src/index.ts"
   },
