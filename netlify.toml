@@ -1,0 +1,4 @@
+[build]
+  publish = "./packages/client/public"
+  command = "npx tsc --build tsconfig.build.json && npm --prefix packages/server install --production && npx webpack"
+  functions = "./packages/server/dist"

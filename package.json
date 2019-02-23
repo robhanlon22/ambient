@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "build": "tsc --build tsconfig.build.json && webpack",
+    "deploy": "npx netlify deploy",
     "start:client": "webpack-dev-server --open",
     "start:server": "ts-node packages/server/src/index.ts"
   },
@@ -25,6 +25,7 @@
     "jest": "^24.1.0",
     "lerna": "^3.13.0",
     "lint-staged": "^8.1.4",
+    "netlify-cli": "^2.8.0",
     "npm-check": "^5.9.0",
     "prettier": "^1.16.4",
     "react": "^16.8.1",
