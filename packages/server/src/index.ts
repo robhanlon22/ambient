@@ -1,8 +1,20 @@
-import Lambda = require("aws-lambda");
+import { ApolloServer, gql } from "apollo-server-lambda";
 
-export const handler: Lambda.Handler = async () => {
-  return {
-    body: "Hello, World",
-    statusCode: 200
-  };
+const typeDefs = gql`
+  type Query {
+    hello: String
+  }
+`;
+
+const resolvers = {
+  Query: {
+    hello: () => "Hello world!"
+  }
 };
+
+const server = new ApolloServer({
+  resolvers,
+  typeDefs
+});
+
+exports.handler = server.createHandler();
