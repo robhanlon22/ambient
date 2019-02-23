@@ -1,6 +1,14 @@
 {
   "name": "ambient",
   "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@ambient/client": "file:packages/client",
+    "@ambient/server": "file:packages/server",
+    "@ambient/shared": "file:packages/shared"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.6",
     "husky": "^1.3.1",
