@@ -10,7 +10,7 @@
     "importHelpers": true,
     "jsx": "react",
     "lib": ["esnext", "dom"],
-    "module": "esnext",
+    "module": "commonjs",
     "paths": {
       "@ambient/client/*": ["packages/client/*"],
       "@ambient/server/*": ["packages/server/*"],
