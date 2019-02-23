@@ -8,7 +8,13 @@ const public = path.resolve(context, "public");
 module.exports = {
   context,
   devServer: {
-    contentBase: public
+    contentBase: public,
+    proxy: {
+      "/.netlify": {
+        pathRewrite: { "^/.netlify/functions": "" },
+        target: "http://localhost:9000"
+      }
+    }
   },
   devtool: "inline-source-map",
   entry: "./src/index.tsx",
@@ -22,8 +28,12 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all"
+    }
+  },
   output: {
-    filename: "[name].bundle.js",
     path: public
   },
   plugins: [new CleanWebpackPlugin([public]), new HtmlWebpackPlugin()],

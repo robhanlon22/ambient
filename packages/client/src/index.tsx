@@ -1,13 +1,20 @@
-import React = require("react");
-import ReactDOM = require("react-dom");
-import Loadable = require("react-loadable");
+import React from "react";
+import ReactDOM from "react-dom";
+import Loadable from "react-loadable";
 
 const Hello = Loadable({
-  loader: () => import("./Hello"),
+  loader: async () => (await import("./Hello")).Hello,
+  loading: () => null
+});
+
+const ApolloProvider = Loadable({
+  loader: async () => (await import("./ApolloContext")).ApolloProvider,
   loading: () => null
 });
 
 ReactDOM.render(
-  <Hello />,
+  <ApolloProvider>
+    <Hello />
+  </ApolloProvider>,
   document.body.appendChild(document.createElement("div"))
 );
