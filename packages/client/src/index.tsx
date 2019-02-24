@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Loadable from "react-loadable";
 
-const Hello = Loadable({
-  loader: async () => (await import("./Hello")).Hello,
+const Tune = Loadable({
+  loader: async () => (await import("./Tune")).Tune,
   loading: () => null
 });
 
@@ -14,7 +14,7 @@ const ApolloProvider = Loadable({
 
 ReactDOM.render(
   <ApolloProvider>
-    <Hello />
+    <Tune />
   </ApolloProvider>,
   document.body.appendChild(document.createElement("div"))
 );
